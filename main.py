@@ -32,8 +32,10 @@ class MainWindow(QMainWindow):
         home_button.triggered.connect(self.navigate_home)
         navbar.addAction(home_button)
 
-        def navigate_home(self):
-            self.browser.setUrl(QUrl("https://google.com"))
+    def navigate_home(self):
+        self.browser.setUrl(QUrl("https://google.com"))
+
+
 
 
 app = QApplication(sys.argv)
