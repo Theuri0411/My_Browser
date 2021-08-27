@@ -12,11 +12,13 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.browser)
         self.showMaximized()
 
-
-        #NAVIGATION BAR
+        # NAVIGATION BAR
         navbar = QToolBar()
         self.addToolBar(navbar)
 
+        back_button = QAction("Back", self)
+        back_button.triggered.connect(self.browser.back)
+        navbar.addAction(back_button)
 
 
 app = QApplication(sys.argv)
