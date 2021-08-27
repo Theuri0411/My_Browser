@@ -13,6 +13,12 @@ class MainWindow(QMainWindow):
         self.showMaximized()
 
 
+        #NAVIGATION BAR
+        navbar = QToolBar()
+        self.addToolBar(navbar)
+
+
+
 app = QApplication(sys.argv)
 QApplication.setApplicationDisplayName("My_Browser")
 window = MainWindow()
