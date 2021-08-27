@@ -38,7 +38,6 @@ class MainWindow(QMainWindow):
 
         self.browser.urlChanged.connect(self.update_url)
 
-
     def navigate_to_url(self):
         url = self.url_bar.text()
         self.browser.setUrl(QUrl(url))
@@ -48,6 +47,7 @@ class MainWindow(QMainWindow):
 
     def update_url(self, q):
         self.url_bar.setText(q.toString())
+
 
 app = QApplication(sys.argv)
 QApplication.setApplicationDisplayName("MY_BROWSER")
